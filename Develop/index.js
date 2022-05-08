@@ -4,7 +4,7 @@ const inquirer = require("inquirer");
 const generateMarkdown = require('./utils/generateMarkdown.js');
 const licenseTypes = ["AGPL 3.0", "Apache 2.0", "GPL 3.0", "LGPL 3.0", "MIT", "MPL 2.0", "Unlicense"];
 
-// array of questions for user input
+// array of questions for user input via 'Inquirer' module
 const questions = [
     {
         name: 'title',
@@ -134,9 +134,10 @@ function init() {
     inquirer.prompt(questions)
     .then(function (usersInput) {
         //console.log(usersInput);
-        writeToFile("README.md", generateMarkdown(usersInput));
         //const readmeContents = generateMarkdown(usersInput);
         //console.log(readmeContents);
+        // end temporary testing
+        writeToFile("README.md", generateMarkdown(usersInput));
     });
 };
 

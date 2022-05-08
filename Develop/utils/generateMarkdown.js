@@ -12,13 +12,13 @@ function renderLicenseBadge(license) {
     case 'LGPL 3.0':
       return '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)';
     case 'MIT': 
-        return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
     case 'MPL 2.0':
-        return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';  
+      return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';  
     case 'Unlicense':
-        return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
+      return '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)';
     default:
-        return '';
+      return '';
   };
 
 };
@@ -52,7 +52,7 @@ function renderLicenseLink(license) {
 function renderLicenseSection(license) {
   const badge = renderLicenseBadge(license);
   const link = renderLicenseLink(license);
-  const licenseSection = badge + '\n  ' + link;
+  const licenseSection = badge + '\n\n\n' + link;
   return licenseSection;
 };
 
@@ -77,6 +77,7 @@ function generateMarkdown(data) {
 
 ## Contributing:
   ${data.contribution}
+  [Contributor Covenant v2.1 text here](https://www.contributor-covenant.org/version/2/1/code_of_conduct/)
 
 ## Testing
   ${data.testing}
