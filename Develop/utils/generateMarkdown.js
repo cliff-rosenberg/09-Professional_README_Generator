@@ -45,6 +45,7 @@ function renderLicenseLink(license) {
     default:
         return '';
   //all licenses at Open Source Initative: https://opensource.org/
+  };
 };
 
 // TODO: Create a function that returns the license section of README
