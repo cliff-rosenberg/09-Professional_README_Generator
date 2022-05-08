@@ -24,10 +24,27 @@ function renderLicenseBadge(license) {
 
 };
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
 function renderLicenseLink(license) {
-
+  switch(license) {
+    case 'AGPL 3.0':
+        return 'Link: [![AGPL 3.0 License](https://opensource.org/licenses/AGPL-3.0';
+    case 'Apache 2.0':
+        return 'Link: [![Apache 2.0 License](https://opensource.org/licenses/Apache-2.0)';
+    case 'GPL 3.0':
+        return 'Link: [![GPL 3.0 License](https://opensource.org/licenses/GPL-3.0)';
+    case 'LGPL 3.0':
+        return 'Link: [![LGPL 3.0 License](https://opensource.org/licenses/unlicense)';
+    case 'MIT': 
+        return 'Link: [![MIT License](https://opensource.org/licenses/MIT)';
+    case 'MPL 2.0':
+        return 'Link: [![MPL 2.0 License](https://opensource.org/licenses/MPL-2.0)';
+    case 'Unlicense':
+        return 'Link: [![The Unlicense](https://opensource.org/licenses/unlicense)';
+    default:
+        return '';
+  //all licenses at Open Source Initative: https://opensource.org/
 };
 
 // TODO: Create a function that returns the license section of README
