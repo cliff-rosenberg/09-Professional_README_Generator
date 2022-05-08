@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 // packages needed for this application
 const fs = require('node:fs');
 const inquirer = require("inquirer");

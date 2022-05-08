@@ -1,3 +1,4 @@
+// SPDX-License-Identifier: MIT
 // Function that returns a license badge,
 // based on which license is passed in.
 // If there is no license, return an empty string
@@ -12,7 +13,7 @@ function renderLicenseBadge(license) {
     case 'LGPL 3.0':
       return '[![License: LGPL v3](https://img.shields.io/badge/License-LGPL_v3-blue.svg)](https://www.gnu.org/licenses/lgpl-3.0)';
     case 'MIT': 
-      return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
+      return '[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)';
     case 'MPL 2.0':
       return '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)';  
     case 'Unlicense':

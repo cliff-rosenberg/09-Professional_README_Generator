@@ -1,7 +1,8 @@
 # Professional README file generator
 
 ## Licensing:
-  [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
+[![License](https://img.shields.io/badge/license-MIT-green)](./LICENSE)
 
 Link: [MIT License](https://opensource.org/licenses/MIT)
 
