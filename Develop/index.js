@@ -1,8 +1,8 @@
 // packages needed for this application
-// converted to ES6 notation
-import { writeFile } from 'fs';
-import inquirer from 'inquirer';
-import generateMarkdown from './utils/generateMarkdown';
+const fs = require('node:fs');
+const inquirer = require("inquirer");
+const generateMarkdown = require('./utils/generateMarkdown.js');
+const licenseTypes = ["AGPL 3.0", "Apache 2.0", "GPL 3.0", "LGPL 3.0", "MIT", "MPL 2.0", "Unlicense"];
 
 // array of questions for user input
 const questions = [
@@ -74,7 +74,7 @@ const questions = [
     {
         name: 'contribution',
         type: 'input',
-        message: 'How should people contribute to this project? (Required)',
+        message: 'How should people contribute to this project? (REQUIRED)',
         validate: contributionInput => {
             if (contributionInput) {
                 return true;
@@ -96,13 +96,31 @@ const questions = [
                 return false;
             }
         }
+    },
+    {
+        name: 'github',
+        type: 'input',
+        message: 'Enter your GitHub username (REQUIRED)',
+        validate: githubInput => {
+            if (githubInput) {
+                return true;
+            } else {
+                console.log('Please enter your GitHub username');
+                return false;
+            }
+        }
+    },
+    {
+        name: 'email',
+        type: 'input',
+        message: '(OPTIONAL) Enter your developer email',
     }
 ];
 
-// TODO: Create a function to write README file
+// Function to write out processed data to README file
 function writeToFile(fileName, data) {
     // write file here
-    writeFile(fileName, data, (err) => {
+    fs.writeFile(fileName, data, (err) => {
         if (err) {
             throw err;
         } else {
@@ -111,15 +129,14 @@ function writeToFile(fileName, data) {
     });
 };
 
-// TODO: Create a function to initialize app
+// Function to initialize app
 function init() {
-    const licenseTypes = ["AGPL 3.0", "Apache 2.0", "GPL 3.0", "LGPL 3.0", "MIT", "MPL 2.0", "Unlicense"];
     inquirer.prompt(questions)
     .then(function (usersInput) {
-        console.log(usersInput);// testing
-        //writeToFile("README.md", generateMarkdown(usersInput));
-        const readmeContents = generateMarkdown(usersInput);
-        console.log(readmeContents);
+        //console.log(usersInput);
+        writeToFile("README.md", generateMarkdown(usersInput));
+        //const readmeContents = generateMarkdown(usersInput);
+        //console.log(readmeContents);
     });
 };
 
