@@ -10,7 +10,11 @@ Link: [MIT License](https://opensource.org/licenses/MIT)
   This application runds in Node to produce nicely formatted README.md files which are then output to a file for inclusion in Github projects.
 
 ## Installation:
-  The project needs the Node module Inquirer to function. The module for filesystem functions is built-in to Node and does not require installation.
+  The project needs the Node module 'Inquirer' to function. The module for filesystem functions is built-in to Node and does not require installation.
+
+## Screenshot
+
+![Screenshot](./images/screenshot1.gif)
 
 ## Usage:
   After typing 'node index.js' in the command window the user is presented with a series of questions relating to the project. After all questions have been answered then the collected data is formatted and output to a README.md file on the disk.
