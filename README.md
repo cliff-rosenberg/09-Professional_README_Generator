@@ -14,6 +14,8 @@ Link: [MIT License](https://opensource.org/licenses/MIT)
 
 ## Screenshot
 
+Link to YouTube video walk-through: [09-Professional_README_Generator video walkthrough](https://youtu.be/5-4Eh2lYQd4)
+
 ![Screenshot](./images/screenshot1.gif)
 
 ## Usage:
